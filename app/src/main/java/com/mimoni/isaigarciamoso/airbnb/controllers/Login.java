@@ -1,6 +1,7 @@
 package com.mimoni.isaigarciamoso.airbnb.controllers;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.mimoni.isaigarciamoso.airbnb.R;
 import com.mimoni.isaigarciamoso.airbnb.delegates.DBHelper;
@@ -22,6 +24,7 @@ import com.mimoni.isaigarciamoso.airbnb.delegates.QuerysDB;
 public class Login extends AppCompatActivity {
 
     private Button btnAccess;
+    private Button crearCuenta;
     private EditText phoneUser;
     private EditText passwordUser;
     private SQLiteDatabase database;
@@ -38,6 +41,13 @@ public class Login extends AppCompatActivity {
         dbHelper = new DBHelper(this);
         querysDB = new QuerysDB();
         Log.d("ok", "TODO OK");
+
+
+        database = dbHelper.getWritableDatabase();
+        //Insertando el base de datos usario de prueba
+        //database.execSQL(querysDB.insertarUsuario());
+
+
     }
 
     private void initView() {
@@ -54,49 +64,58 @@ public class Login extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.btnEnter:
-
+                    String telefono = phoneUser.getText().toString();
+                    String contrasena = passwordUser.getText().toString();
                     database = dbHelper.getReadableDatabase();
-                    if (database != null) {
-                        Cursor cursor = database.rawQuery(querysDB.consultarLogin("", ""), null);
-                        int filas = cursor.getCount();
-                        if (filas > 0) {
 
-                        } else {
-                            messageDialog("Usuario y/o contraseña incorrecta","El nombre de usuario y la contraseña que ingresaste no coinciden con nuestros registros " +
-                                    "por favor, revisa e inténtalo de nuevo","Aceptar");
+                    if (telefono.equals("") && contrasena.equals("")) {
+                        messageDialog("Llena los campo faltantes", "Es necesario llenar los campos para poder acceder", "Aceptar");
+                    } else if (telefono.equals("")) {
+                        messageDialog("Llena el campo télefono", "Es necesario llenar el campo de télefono", "Aceptar");
+                    } else if (contrasena.equals("")) {
+                        messageDialog("Llena el campo de contraseña", "Es necesario llenar el campo contraseña", "Aceptar");
+                    } else {
+
+                        if (database != null) {
+                            System.out.print(querysDB.consultarLogin(telefono,contrasena));
+                            Toast.makeText(getApplicationContext(),querysDB.consultarLogin(telefono,contrasena),Toast.LENGTH_LONG).show();
+                            Cursor cursor = database.rawQuery(querysDB.consultarLogin(telefono, contrasena), null);
+                            int filas = cursor.getCount();
+                            if (filas > 0) {
+                                // si el usuario existe
+                                Intent intent = new Intent(getApplicationContext(), Principal.class);
+                                startActivity(intent);
+                            } else {
+                                messageDialog("Usuario y/o contraseña incorrecta", "El nombre de usuario y la contraseña que ingresaste no coinciden con nuestros registros " +
+                                        "por favor, revisa e inténtalo de nuevo", "Aceptar");
+                            }
                         }
                     }
+                     //fin del primer case
+                        break;
+
+                case R.id.btnCrearCuenta:
+
+
                     break;
             }
-
         }
     };
-
-    public void messageDialog(String titulo, String mensaje,String btnNombre) {
+    //messageDialog
+    public void messageDialog(String titulo, String mensaje, String btnNombre) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this)
                 .setTitle(titulo)
                 .setMessage(mensaje)
                 .setPositiveButton(btnNombre, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-           
-            }
-        });
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
         AlertDialog alert = builder.create();
         alert.show();
     }
 
 
-    public boolean validarLogin(String telefono, String contrasena) {
-        if (telefono.equals("") && contrasena.equals("")) {
-            return false;
-        } else if (telefono.equals("")) {
-            return false;
-        } else if (contrasena.equals("")) {
 
-        } else {
-            return true;
-        }
-        return true;
-    }
 }

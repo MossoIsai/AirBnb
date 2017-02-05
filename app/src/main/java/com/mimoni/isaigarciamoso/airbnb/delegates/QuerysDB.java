@@ -76,8 +76,20 @@ public class QuerysDB {
     }
     public String consultarLogin(String phone,String password){
 
-      return  "SELECT * FROM "+TABLE_USUARIO+" WHERE "+Usuario.TELEFONO_USER+"  = '"+phone+"' AND "+
-              Usuario.CONTRASENA_USER+" = '"+password+" ' ";
+      return
+        "SELECT * FROM "+TABLE_USUARIO+"  WHERE "+ Usuario.TELEFONO_USER+" = '"+phone+"' AND "+
+                Usuario.CONTRASENA_USER+" = '"+password+"'";
+        //return "SELECT * FROM USUARIO WHERE telefono = '5574260143' AND  contrasena = '2468'";
+    }
+    //Prueba
+    public String insertarUsuario(){
+        Log.d(consoleLog,"INSERT INTO "+TABLE_USUARIO+" ("+ Usuario.NOMBRE_USER+" , "+Usuario.APELLIDO_USER+" , "+
+                Usuario.TELEFONO_USER+" , "+Usuario.CORREO_USER+" ,"+Usuario.CONTRASENA_USER+" ,"+Usuario.EDAD_USER+" )"+
+                " VALUES('ISAI','MOSO','5574260143','isaimosso@gmail.com','2468',25)");
+
+        return  "INSERT INTO "+TABLE_USUARIO+" ("+ Usuario.NOMBRE_USER+" , "+Usuario.APELLIDO_USER+" , "+
+                Usuario.TELEFONO_USER+" , "+Usuario.CORREO_USER+" ,"+Usuario.CONTRASENA_USER+" ,"+Usuario.EDAD_USER+" )"+
+                " VALUES('ISAI','MOSO','5574260143','isaimosso@gmail.com','2468',25)";
     }
 
 }
