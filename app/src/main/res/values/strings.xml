@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AirBnb</string>
+    <string name="text_phone">Teléfono</string>
+    <string name="text_password">Contraseña</string>
+</resources>
