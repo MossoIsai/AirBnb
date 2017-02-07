@@ -1,0 +1,66 @@
+{
+
+    Departamento: [{
+
+        id: '1',
+        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+        precio: '893.00 MXN',
+        descripcion: 'Habitación comoda con excelente servicio al cuarto',
+        votos: '200',
+        latitud: '-19.9586843',
+        longitud: '99.3442432'
+    },{
+
+        id: '2',
+        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+        precio: '893.00 MXN',
+        descripcion: 'Habitación comoda con excelente servicio al cuarto',
+        votos: '200',
+        latitud: '-19.9586843',
+        longitud: '99.3442432'
+    },{
+
+       id: '3',
+       direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+       precio: '893.00 MXN',
+       descripcion: 'Habitación comoda con excelente servicio al cuarto',
+       votos: '200',
+       latitud: '-19.9586843',
+       longitud: '99.3442432'
+    },{
+
+       id: '4',
+       direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+       precio: '893.00 MXN',
+       descripcion: 'Habitación comoda con excelente servicio al cuarto',
+       votos: '200',
+       latitud: '-19.9586843',
+       longitud: '99.3442432'
+    },{
+
+       id: '5',
+       direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+       precio: '893.00 MXN',
+       descripcion: 'Habitación comoda con excelente servicio al cuarto',
+       votos: '200',
+       latitud: '-19.9586843',
+       longitud: '99.3442432'
+    },{
+        id: '6',
+        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+        precio: '893.00 MXN',
+        descripcion: 'Habitación comoda con excelente servicio al cuarto',
+        votos: '200',
+        latitud: '-19.9586843',
+        longitud: '99.3442432'
+    },{
+        id: '7',
+        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
+        precio: '893.00 MXN',
+        descripcion: 'Habitación comoda con excelente servicio al cuarto',
+        votos: '200',
+        latitud: '-19.9586843',
+        longitud: '99.3442432'
+    }]
+
+}

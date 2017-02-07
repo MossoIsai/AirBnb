@@ -12,7 +12,7 @@ import android.util.Log;
 public class DBHelper  extends SQLiteOpenHelper{
 
     private static final int VERSION = 1;
-    private static final String NOMBRE_DB = "MIMONIDB4";
+    private static final String NOMBRE_DB = "MIMONIDB";
     private QuerysDB querysDB;
 
     public  DBHelper(Context context){

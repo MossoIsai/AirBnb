@@ -9,19 +9,39 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:srcCompat="@drawable/depa1"
-        android:id="@+id/imageView"
+        android:id="@+id/imagenDepa"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Bonito Cuerto para 3 Personas"
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_below="@+id/imagenDepa"
+        android:layout_alignLeft="@+id/descipcionDepa"
+        android:layout_alignStart="@+id/descipcionDepa" />
+
+    <!--<RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarDepa"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ubicacionDepa"
+        android:layout_alignLeft="@+id/ubicacionDepa"
+        android:layout_alignStart="@+id/ubicacionDepa" />-->
+
+    <TextView
+        android:text="Bonito cuarto para 3 personas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
         android:textSize="20dp"
-        android:id="@+id/textView"
-        android:layout_below="@+id/imageView"
+        android:id="@+id/descipcionDepa"
+        android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -29,18 +49,9 @@
         android:text="Cuernavac, Morelos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="16dp"
-        android:id="@+id/textView2" />
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:id="@+id/ubicacionDepa"
+        android:layout_below="@+id/descipcionDepa"
+        android:layout_alignLeft="@+id/descipcionDepa"
+        android:layout_alignStart="@+id/descipcionDepa" />
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ public class QuerysDB {
 
     private static final  String INTEGER = "INTEGER";
     private static final String TEXT = "TEXT";
+    private static final String REAL = "REAL";
     private static final String consoleLog = "CONSOLA";
 
     //Tablas
@@ -34,6 +35,9 @@ public class QuerysDB {
         private static final String PRECIO_DEPTO = "precio";
         private static final String DESCRIPCION_DEPTO = "descripcion";
         private static final String VOTOS_DEPTO = "votos";
+        private static final String LATITUD_DEPTO = "latitud";
+        private static final String LONGITUD_DEPTO = "longitud";
+
     }
 
     public String createTableUsuario(){
@@ -65,14 +69,18 @@ public class QuerysDB {
                 Departamento.DIRECCION_DEPTO+" "+TEXT+" ,"+
                 Departamento.PRECIO_DEPTO+" "+TEXT+" ,"+
                 Departamento.DESCRIPCION_DEPTO+" "+TEXT+" ,"+
-                Departamento.VOTOS_DEPTO+" "+INTEGER+" )");
+                Departamento.VOTOS_DEPTO+" "+INTEGER+","+
+                Departamento.LATITUD_DEPTO+" "+REAL+" , "+
+                Departamento.LONGITUD_DEPTO+" "+REAL+" )");
 
         return "CREATE TABLE "+TABLE_DEPARTAMENTO+" ( "+
                 Departamento.ID_DEPTO+" "+INTEGER+" ,"+
                 Departamento.DIRECCION_DEPTO+" "+TEXT+" ,"+
                 Departamento.PRECIO_DEPTO+" "+TEXT+" ,"+
                 Departamento.DESCRIPCION_DEPTO+" "+TEXT+" ,"+
-                Departamento.VOTOS_DEPTO+" "+INTEGER+" )";
+                Departamento.VOTOS_DEPTO+" "+INTEGER+","+
+                Departamento.LATITUD_DEPTO+" "+REAL+" , "+
+                Departamento.LONGITUD_DEPTO+" "+REAL+" )";
     }
     public String consultarLogin(String phone,String password){
 
@@ -90,6 +98,14 @@ public class QuerysDB {
         return  "INSERT INTO "+TABLE_USUARIO+" ("+ Usuario.NOMBRE_USER+" , "+Usuario.APELLIDO_USER+" , "+
                 Usuario.TELEFONO_USER+" , "+Usuario.CORREO_USER+" ,"+Usuario.CONTRASENA_USER+" ,"+Usuario.EDAD_USER+" )"+
                 " VALUES('ISAI','MOSO','5574260143','isaimosso@gmail.com','2468',25)";
+    }
+    //Prueba
+    public String insertarDepartamento(){
+        return "INSERT INTO DEPARTAMENTO(id,direccion,precio,descripcion,votos,latitud,longitud) " +
+                "VALUES(1,'Vista Hermosa, Cuernavaca, Morelos',789,'Hermosa departamento para 1 Persona',67,18.9343080,-99.2070589)";
+    }
+    public static String buscaDepartamentos(){
+        return  "SELECT * FROM DEPARTAMENTO";
     }
 
 }

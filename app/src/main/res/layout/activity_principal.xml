@@ -5,24 +5,35 @@
     android:id="@+id/activity_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     tools:context="com.mimoni.isaigarciamoso.airbnb.controllers.Principal">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/listaDepa">
         </ListView>
 
-    </FrameLayout>
-
-    <android.support.design.widget.BottomNavigationView
+    <FrameLayout
+        android:background="@color/menuColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        design:menu="@menu/menu_navigation">
-    </android.support.design.widget.BottomNavigationView>
+        android:layout_gravity="bottom">
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="top"
+            android:background="@drawable/shape"/>
+
+        <android.support.design.widget.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            design:menu="@menu/menu_navigation">
+        </android.support.design.widget.BottomNavigationView>
+
+    </FrameLayout>
+
+
 
 </android.support.design.widget.CoordinatorLayout>

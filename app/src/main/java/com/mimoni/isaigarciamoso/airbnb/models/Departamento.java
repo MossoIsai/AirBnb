@@ -11,8 +11,6 @@ public class Departamento {
     private int precio;
     private String descripcion;
     private int votos;
-    private String fotografias[];
-    private String servicios[];
     private double latitud;
     private double longitud;
 
@@ -20,15 +18,12 @@ public class Departamento {
     public Departamento(){
 
     }
-
-    public Departamento(int id, String direccion, int precio, String descripcion, int votos, String[] fotografias, String[] servicios, double latitud, double longitud) {
+    public Departamento(int id, String direccion, int precio, String descripcion, int votos, double latitud, double longitud) {
         this.id = id;
         this.direccion = direccion;
         this.precio = precio;
         this.descripcion = descripcion;
         this.votos = votos;
-        this.fotografias = fotografias;
-        this.servicios = servicios;
         this.latitud = latitud;
         this.longitud = longitud;
     }
@@ -71,22 +66,6 @@ public class Departamento {
 
     public void setVotos(int votos) {
         this.votos = votos;
-    }
-
-    public String[] getFotografias() {
-        return fotografias;
-    }
-
-    public void setFotografias(String[] fotografias) {
-        this.fotografias = fotografias;
-    }
-
-    public String[] getServicios() {
-        return servicios;
-    }
-
-    public void setServicios(String[] servicios) {
-        this.servicios = servicios;
     }
 
     public double getLatitud() {

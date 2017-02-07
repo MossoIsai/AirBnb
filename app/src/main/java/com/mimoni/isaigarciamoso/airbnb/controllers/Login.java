@@ -45,7 +45,9 @@ public class Login extends AppCompatActivity {
 
         database = dbHelper.getWritableDatabase();
         //Insertando el base de datos usario de prueba
-        //database.execSQL(querysDB.insertarUsuario());
+        database.execSQL(querysDB.insertarUsuario());
+        database.execSQL(querysDB.insertarDepartamento());
+        Log.d("ok","INSERTO EN DEPARTAMENTO");
 
 
     }
@@ -91,9 +93,9 @@ public class Login extends AppCompatActivity {
                             }
                         }
                     }
-                     //fin del primer case
+                    dbHelper.close();
+                    //fin del primer case
                         break;
-
                 case R.id.btnCrearCuenta:
 
 
