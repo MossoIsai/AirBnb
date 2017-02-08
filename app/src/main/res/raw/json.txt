@@ -3,64 +3,77 @@
     Departamento: [{
 
         id: '1',
-        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-        precio: '893.00 MXN',
+        direccion: 'Polanco CDMX, Av.San Joaquin 45',
+        precio: '893',
         descripcion: 'Habitación comoda con excelente servicio al cuarto',
         votos: '200',
         latitud: '-19.9586843',
-        longitud: '99.3442432'
+        longitud: '99.3442432',
+        fotoPrincipal:'depa1'
     },{
 
         id: '2',
-        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-        precio: '893.00 MXN',
-        descripcion: 'Habitación comoda con excelente servicio al cuarto',
-        votos: '200',
-        latitud: '-19.9586843',
-        longitud: '99.3442432'
+        direccion: 'Tlaquiltenango, Morelos, Agricultura 46, Col. Gabriel Tepapa',
+        precio: '1200',
+        descripcion: 'Casa con 3 cuartos con todos los servicios',
+        votos: '110',
+        latitud: '-19.9994565',
+        longitud: '99.5667899',
+        fotoPrincipal:'depa2'
+
     },{
 
        id: '3',
-       direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-       precio: '893.00 MXN',
-       descripcion: 'Habitación comoda con excelente servicio al cuarto',
-       votos: '200',
-       latitud: '-19.9586843',
-       longitud: '99.3442432'
+       direccion: 'Tlatizapan, Morelos, Niños Heroes, Col. Juan de la Barrera',
+       precio: '735',
+       descripcion: 'Cuarto con todos los servicios',
+       votos: '111',
+       latitud: '-19.4578900',
+       longitud: '99.9467356',
+       fotoPrincipal:'depa3'
+
     },{
 
        id: '4',
-       direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-       precio: '893.00 MXN',
+       direccion: 'Cuernavaca, Morelos, Av. Rio Mayo 1601, Col. Vista Hermosa',
+       precio: '1350',
        descripcion: 'Habitación comoda con excelente servicio al cuarto',
-       votos: '200',
-       latitud: '-19.9586843',
-       longitud: '99.3442432'
+       votos: '2000',
+       latitud: '-19.124678',
+       longitud: '99.877636',
+       fotoPrincipal:'depa4'
+
     },{
 
        id: '5',
-       direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-       precio: '893.00 MXN',
+       direccion: 'Santa Fe, CDMX. Prolongacion Paseo de La Reforma',
+       precio: '893',
        descripcion: 'Habitación comoda con excelente servicio al cuarto',
-       votos: '200',
+       votos: '482',
        latitud: '-19.9586843',
-       longitud: '99.3442432'
+       longitud: '99.3442432',
+       fotoPrincipal:'depa5'
+
     },{
         id: '6',
-        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-        precio: '893.00 MXN',
-        descripcion: 'Habitación comoda con excelente servicio al cuarto',
-        votos: '200',
+        direccion: 'Tepoztlan, Morelos, Tepoztlan 15, col. Tepozteco',
+        precio: '649',
+        descripcion: 'Recamara con 4 cuartos ubicada en una excelence resiendia',
+        votos: '2478',
         latitud: '-19.9586843',
-        longitud: '99.3442432'
+        longitud: '99.3442432',
+        fotoPrincipal:'depa6'
+
     },{
         id: '7',
-        direccion: 'Polanco CDMX Av.Siempre Viva #1345',
-        precio: '893.00 MXN',
-        descripcion: 'Habitación comoda con excelente servicio al cuarto',
-        votos: '200',
+        direccion: 'Parque Industrial El Sauzal Nave 1, Ensenada',
+        precio: '893',
+        descripcion: 'Cuartos comodo ubicadod en una zona residencial',
+        votos: '956',
         latitud: '-19.9586843',
-        longitud: '99.3442432'
+        longitud: '99.3442432',
+        fotoPrincipal:'depa7'
+
     }]
 
 }

@@ -21,7 +21,7 @@ public class ParseJson {
     public JSONObject parseJSON(InputStream flujoEntrada) {
 
         try {
-            BufferedReader lector = new BufferedReader(new InputStreamReader(flujoEntrada, "iso-8859-1"), 8);
+            BufferedReader lector = new BufferedReader(new InputStreamReader(flujoEntrada, "UTF_8"), 8);
             StringBuilder stringBuilder = new StringBuilder();
             String linea = "";
             //mientras sigan existiendo lineas en el archivo condicion

@@ -46,8 +46,8 @@ public class Login extends AppCompatActivity {
         database = dbHelper.getWritableDatabase();
         //Insertando el base de datos usario de prueba
         database.execSQL(querysDB.insertarUsuario());
-        database.execSQL(querysDB.insertarDepartamento());
-        Log.d("ok","INSERTO EN DEPARTAMENTO");
+       // database.execSQL(querysDB.insertarDepartamento());
+        //Log.d("ok","INSERTO EN DEPARTAMENTO");
 
 
     }
@@ -85,6 +85,7 @@ public class Login extends AppCompatActivity {
                             int filas = cursor.getCount();
                             if (filas > 0) {
                                 // si el usuario existe
+
                                 Intent intent = new Intent(getApplicationContext(), Principal.class);
                                 startActivity(intent);
                             } else {
@@ -97,8 +98,6 @@ public class Login extends AppCompatActivity {
                     //fin del primer case
                         break;
                 case R.id.btnCrearCuenta:
-
-
                     break;
             }
         }
@@ -117,7 +116,9 @@ public class Login extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
-
+    public void saveSession(){
+         
+    }
 
 
 }

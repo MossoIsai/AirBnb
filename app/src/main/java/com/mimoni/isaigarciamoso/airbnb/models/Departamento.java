@@ -13,12 +13,13 @@ public class Departamento {
     private int votos;
     private double latitud;
     private double longitud;
+    private String namePhoto;
 
 
     public Departamento(){
 
     }
-    public Departamento(int id, String direccion, int precio, String descripcion, int votos, double latitud, double longitud) {
+    /*public Departamento(int id, String direccion, int precio, String descripcion, int votos, double latitud, double longitud) {
         this.id = id;
         this.direccion = direccion;
         this.precio = precio;
@@ -26,6 +27,17 @@ public class Departamento {
         this.votos = votos;
         this.latitud = latitud;
         this.longitud = longitud;
+    }*/
+
+    public Departamento(int id, String direccion, int precio, String descripcion, int votos, double latitud, double longitud, String namePhoto) {
+        this.id = id;
+        this.direccion = direccion;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.votos = votos;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.namePhoto = namePhoto;
     }
 
     public int getId() {
@@ -84,5 +96,11 @@ public class Departamento {
         this.longitud = longitud;
     }
 
+    public String getNamePhoto() {
+        return namePhoto;
+    }
 
+    public void setNamePhoto(String namePhoto) {
+        this.namePhoto = namePhoto;
+    }
 }
