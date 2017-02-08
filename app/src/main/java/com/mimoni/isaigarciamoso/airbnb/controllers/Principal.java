@@ -1,5 +1,6 @@
 package com.mimoni.isaigarciamoso.airbnb.controllers;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -86,6 +87,10 @@ public class Principal extends AppCompatActivity  {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 System.out.println("POSICION..-------"+i);
                 System.out.println("LISTA  OBJETO"+ departamentoList.get(i).getPrecio());
+
+                Intent intent = new Intent(getApplicationContext(),DetalleDepartamento.class);
+                startActivity(intent);
+
             }
         });
     }
