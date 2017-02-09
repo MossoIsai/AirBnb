@@ -71,8 +71,9 @@ public class Principal extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 System.out.println("POSICION..-------" + i);
                 System.out.println("LISTA  OBJETO" + departamentoList.get(i).getPrecio());
-
+                 int idDepartamento = departamentoList.get(i).getId();
                 Intent intent = new Intent(getApplicationContext(), DetalleDepartamento.class);
+                intent.putExtra("ID",idDepartamento);
                 startActivity(intent);
 
             }

@@ -129,4 +129,14 @@ public class QuerysDB {
         return "SELECT * FROM DEPARTAMENTO";
     }
 
+    public static String buscarDepartamentoPorId(int idDepto){
+
+        System.out.println("SELECT id,direccion,precio,descripcion,votos,latitud,longitud,fotoPrincipal FROM "+
+                TABLE_DEPARTAMENTO+" WHERE "+Departamento.ID_DEPTO+"  = "+idDepto+" LIMIT 1 ");
+
+
+        return "SELECT id,direccion,precio,descripcion,votos,latitud,longitud,fotoPrincipal FROM "+
+                TABLE_DEPARTAMENTO+" WHERE "+Departamento.ID_DEPTO+"  = "+idDepto+" LIMIT 1 ";
+    }
+
 }

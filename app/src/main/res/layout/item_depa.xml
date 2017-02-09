@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="13dp"
         android:layout_marginStart="13dp"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:id="@+id/descipcionDepa"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
@@ -49,11 +49,14 @@
         android:text="Cuernavac, Morelos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="11dp"
         android:layout_marginBottom="15dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/ubicacionDepa"
         android:layout_below="@+id/descipcionDepa"
         android:layout_alignLeft="@+id/descipcionDepa"
         android:layout_alignStart="@+id/descipcionDepa" />
+
 
 
 

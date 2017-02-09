@@ -3,6 +3,9 @@
     <color name="colorPrimary">#FF5722</color>
     <color name="colorPrimaryDark">#F44336</color>
     <color name="colorAccent">#5AB963</color>
+    <color name="greenStar">#4ca05a</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="botonesColor">#ec5b5b</color>
     <color name="menuColor">#EEEEEE</color>
     <color name="transparente_medio">#c8ffffff</color>
 </resources>

@@ -7,8 +7,8 @@
         precio: '893',
         descripcion: 'Habitación comoda con excelente servicio al cuarto',
         votos: '200',
-        latitud: '-19.9586843',
-        longitud: '99.3442432',
+        latitud: '19.4340199',
+        longitud: '-99.1956012',
         fotoPrincipal:'depa1'
     },{
 
@@ -17,8 +17,8 @@
         precio: '1200',
         descripcion: 'Casa con 3 cuartos con todos los servicios',
         votos: '110',
-        latitud: '-19.9994565',
-        longitud: '99.5667899',
+        latitud: '18.6333701',
+        longitud: '-99.1612083',
         fotoPrincipal:'depa2'
 
     },{
@@ -28,8 +28,8 @@
        precio: '735',
        descripcion: 'Cuarto con todos los servicios',
        votos: '111',
-       latitud: '-19.4578900',
-       longitud: '99.9467356',
+       latitud: '18.6891866',
+       longitud: '-99.1207129',
        fotoPrincipal:'depa3'
 
     },{
@@ -39,8 +39,8 @@
        precio: '1350',
        descripcion: 'Habitación comoda con excelente servicio al cuarto',
        votos: '2000',
-       latitud: '-19.124678',
-       longitud: '99.877636',
+       latitud: '18.9242095',
+       longitud: '-99.22156590000003',
        fotoPrincipal:'depa4'
 
     },{
@@ -50,8 +50,8 @@
        precio: '893',
        descripcion: 'Habitación comoda con excelente servicio al cuarto',
        votos: '482',
-       latitud: '-19.9586843',
-       longitud: '99.3442432',
+       latitud: '19.3863928',
+       longitud: '-99.22556250000002',
        fotoPrincipal:'depa5'
 
     },{
@@ -60,8 +60,8 @@
         precio: '649',
         descripcion: 'Recamara con 4 cuartos ubicada en una excelence resiendia',
         votos: '2478',
-        latitud: '-19.9586843',
-        longitud: '99.3442432',
+        latitud: '18.9848015',
+        longitud: '-99.09305280000001',
         fotoPrincipal:'depa6'
 
     },{
@@ -70,8 +70,8 @@
         precio: '893',
         descripcion: 'Cuartos comodo ubicadod en una zona residencial',
         votos: '956',
-        latitud: '-19.9586843',
-        longitud: '99.3442432',
+        latitud: '31.8667427',
+        longitud: '-116.59637129999999',
         fotoPrincipal:'depa7'
 
     }]

@@ -1,7 +1,9 @@
 package com.mimoni.isaigarciamoso.airbnb.controllers;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -30,6 +32,7 @@ public class Login extends AppCompatActivity {
     private SQLiteDatabase database;
     private DBHelper dbHelper;
     private QuerysDB querysDB;
+    private boolean session = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         //Cargando vistas
         initView();
-        //Se crea la base de datos
+
         dbHelper = new DBHelper(this);
         querysDB = new QuerysDB();
         Log.d("ok", "TODO OK");
@@ -51,7 +54,6 @@ public class Login extends AppCompatActivity {
 
 
     }
-
     private void initView() {
         btnAccess = (Button) findViewById(R.id.btnEnter);
         phoneUser = (EditText) findViewById(R.id.textPhone);
@@ -80,14 +82,16 @@ public class Login extends AppCompatActivity {
 
                         if (database != null) {
                             System.out.print(querysDB.consultarLogin(telefono,contrasena));
-                            Toast.makeText(getApplicationContext(),querysDB.consultarLogin(telefono,contrasena),Toast.LENGTH_LONG).show();
                             Cursor cursor = database.rawQuery(querysDB.consultarLogin(telefono, contrasena), null);
                             int filas = cursor.getCount();
                             if (filas > 0) {
-                                // si el usuario existe
+                                // si el usuario existe guardo la Session en SharedPrefences
+                                session = true;
+                                guardarSession(session);
 
                                 Intent intent = new Intent(getApplicationContext(), Principal.class);
                                 startActivity(intent);
+                                finish();
                             } else {
                                 messageDialog("Usuario y/o contraseña incorrecta", "El nombre de usuario y la contraseña que ingresaste no coinciden con nuestros registros " +
                                         "por favor, revisa e inténtalo de nuevo", "Aceptar");
@@ -116,8 +120,12 @@ public class Login extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
-    public void saveSession(){
-         
+    public void guardarSession(boolean session) {
+        String preferencia = "MIS_PREFRENCIAS";
+        int modoPrivacidad = Context.MODE_PRIVATE;
+        SharedPreferences.Editor editor = getSharedPreferences(preferencia, modoPrivacidad).edit();
+        editor.putBoolean("keyButtoncall", session);
+        editor.commit();
     }
 
 
